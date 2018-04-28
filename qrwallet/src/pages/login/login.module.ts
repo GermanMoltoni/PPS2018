@@ -7,7 +7,12 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { FormsModule,ReactiveFormsModule}   from '@angular/forms';
 
 export var config = {
-
+    apiKey: "AIzaSyDw81dYicIrmPnn0NTIJ9qu2ibQVYOrjOU",
+    authDomain: "cargacreditopps2018.firebaseapp.com",
+    databaseURL: "https://cargacreditopps2018.firebaseio.com",
+    projectId: "cargacreditopps2018",
+    storageBucket: "cargacreditopps2018.appspot.com",
+    messagingSenderId: "433306208270"
 };
 @NgModule({
   declarations: [

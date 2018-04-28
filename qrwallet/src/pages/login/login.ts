@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HomePage } from '../home/home';
+import { TabsPage } from '../tabs/tabs';
 import { Validators,FormBuilder,FormControl,FormGroup }   from '@angular/forms';
 import { AlertController } from 'ionic-angular';
 import {FirebaseProvider} from "../../providers/firebase/firebase";
@@ -32,7 +32,7 @@ export class LoginPage {
     let password = this.loginForm.get('password').value;
     this.firebase.login(mail,password).then(res=>{
         this.user =res;
-        this.navCtrl.push(HomePage);
+        this.navCtrl.push(TabsPage);
     }).catch(err=>{
         this.alertCtrl.create(this.firebase.capturaError(err)).present();
 
