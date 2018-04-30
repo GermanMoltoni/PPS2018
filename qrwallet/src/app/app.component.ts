@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 
 import { LoginPage } from '../pages/login/login';
-import {Observable} from "rxjs/Observable";
+
 
 @Component({
   templateUrl: 'app.html'
@@ -19,8 +19,9 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
        statusBar.styleDefault();
       //splashScreen.hide();
-      splashScreen.hide();  // <-- hide static image
-      setInterval(()=>{ this.showSplash = false;},1000) // <-- hide animation after 3s
+      setInterval(()=>{ this.showSplash = false;  },1000);// <-- hide animation after 3s
+      splashScreen.hide();
+
     });
   }
 

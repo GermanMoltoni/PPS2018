@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import {AngularFireAuth} from "angularfire2/auth";
+
 import * as firebase from 'firebase/app';
+import {AngularFireDatabase} from "angularfire2/database";
 /*
   Generated class for the FirebaseProvider provider.
 
@@ -9,12 +11,12 @@ import * as firebase from 'firebase/app';
 */
 @Injectable()
 export class FirebaseProvider {
-
-  constructor(public afAuth: AngularFireAuth) {
+    usuario;
+  constructor(public afAuth: AngularFireAuth,public af:AngularFireDatabase) {
     console.log('Hello FirebaseProvider Provider');
-  }
+  } 
   login(mail:string,password:string){
-      return firebase.auth().signInWithEmailAndPassword(mail, password).then(this.capturaUsuario);//.catch(this.capturaError);
+    return firebase.auth().signInWithEmailAndPassword(mail, password).then(this.capturaUsuario);//.catch(this.capturaError);
   }
   socialLogin(redSocial:string){
       switch (redSocial) {
@@ -44,7 +46,15 @@ export class FirebaseProvider {
     return datos;
   }
 
-  capturaError(error:any){
+  getUsuarios(){
+    return this.getDatos('usuarios').snapshotChanges();
+  }
+  getDatos(db_name){
+    return this.af.list(db_name);
+
+  }
+ 
+  private _capturaError(error:any){
       let opciones;
       switch (error.code) {
           case 'auth/invalid-email':

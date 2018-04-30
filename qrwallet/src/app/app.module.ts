@@ -12,6 +12,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPageModule } from '../pages/login/login.module';
 import { FirebaseProvider } from '../providers/firebase/firebase';
+import {BarcodeScanner} from "@ionic-native/barcode-scanner";
+import {AngularFireDatabaseModule} from "angularfire2/database";
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { FirebaseProvider } from '../providers/firebase/firebase';
   imports: [
     BrowserModule,
     LoginPageModule,
+    AngularFireDatabaseModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -37,6 +40,7 @@ import { FirebaseProvider } from '../providers/firebase/firebase';
   providers: [
     StatusBar,
     SplashScreen,
+    BarcodeScanner,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     FirebaseProvider
   ]
