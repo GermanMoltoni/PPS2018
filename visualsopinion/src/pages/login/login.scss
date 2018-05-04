@@ -1,0 +1,80 @@
+page-login {
+    
+}
+page-login {
+    
+    .grupo .rounded{
+        -webkit-border-radius: 50px;
+          border:none;
+         padding: 10px 20px;
+         border-radius:25px;
+         width:100%;
+         background:rgba(255,255,255,.1)       
+
+        }
+
+
+    .container {
+       // width: 300px; 
+        margin-left:auto; 
+        margin-right: auto; 
+        
+    }
+      .grupo{
+         background-color: transparent;
+    }
+      .grupo .label{
+        width:100%;
+        color:#fff;
+        display:block;
+        color:#aaa;
+        font-size:12px;
+    }
+
+
+
+
+    .formulario{	min-height:200px;
+        //position:relative;
+        margin: auto;
+        position: absolute;
+        top: 10%; left: 0;   right: 0;
+        perspective:1000px;
+        padding: 20px 25px 30px;
+        transform-style:preserve-3d;
+        background: rgba(24, 92, 145, 0.7);//transparent;//rgba(40,57,101,.9);
+       
+ 
+        max-width: 350px;
+        top: 10%;
+        //width: 100%;
+        //text-align: center;
+        font-size: 18px;
+        
+    }
+
+ 
+    .fondo{
+        width:100%;
+        margin:auto;
+        max-width:100%;//525px;
+        min-height:100%;//670px;
+        background-position: center center;
+        background-attachment: fixed;
+        
+        position:relative;
+        //background:url('../../assets/fondo-login.jpg')no-repeat center;
+       background:url(https://www.pixelstalk.net/wp-content/uploads/2016/10/Blank-Background-for-Desktop.jpg)no-repeat center;
+    //    background:url(https://static1.squarespace.com/static/59779c0fe4fcb5628a339a58/59779d3d37c581c4facdd509/59a43126f5e2318004c3d91d/1503933154053/636068890601153422-951403727_4-tips-for-a-smooth-back-to-school-transition-after-winter-break-1-2.jpeg?format=2500w) no-repeat center;
+        box-shadow:0 12px 15px 0 rgba(39, 119, 184, 0.66),0 17px 50px 0 rgba(0,0,0,.19);
+    }
+    .hr{
+        height:2px;
+        margin:20px 0 30px 0;
+        background:rgba(255,255,255,.2);
+    }
+    .foot-lnk{
+        margin:5px 0 5px 0;
+        text-align:center;
+    }
+}
